@@ -4,7 +4,8 @@ run_tests=''
 running_all=false
 
 TEST_DIR="$(cd "$(dirname "$0")" && pwd)"
-export TEST_DIR
+LD_LIBRARY_PATH=".:${LD_LIBRARY_PATH}"
+export TEST_DIR LD_LIBRARY_PATH
 
 if [[ -z ${*} ]]; then
     running_all=true
