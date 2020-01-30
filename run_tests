@@ -3,11 +3,11 @@
 run_tests=''
 running_all=false
 
-echo "Fixing Makefile..."
-cp -v "${TEST_DIR}/new_Makefile" "${TEST_DIR}/../Makefile"
-
 TEST_DIR="$(cd "$(dirname "$0")" && pwd)"
 export TEST_DIR
+
+echo "Fixing Makefile..."
+cp -v "${TEST_DIR}/new_Makefile" "${TEST_DIR}/../Makefile"
 
 if [[ -z ${*} ]]; then
     running_all=true
