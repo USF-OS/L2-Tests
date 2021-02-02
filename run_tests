@@ -6,9 +6,6 @@ running_all=false
 TEST_DIR="$(cd "$(dirname "$0")" && pwd)"
 export TEST_DIR
 
-echo "Fixing Makefile..."
-cp -v "${TEST_DIR}/new_Makefile" "${TEST_DIR}/../Makefile"
-
 if [[ -z ${*} ]]; then
     running_all=true
     run_tests=$(ls -1 ./tests/??-*-*.sh);
